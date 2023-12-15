@@ -5,30 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OOP Game</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        #container {
+            background-image: url(dark-magic.jpeg);
+        }
+    </style>
 </head>
-<body class="font-mono text-sm">
-    <div id="container" class="w-screen h-auto grid grid-cols-2 flex justify-items-center content-around">
+<body class="font-mono text-sm text-white">
+    <div id="container" class="w-screen h-screen grid grid-cols-2 flex justify-items-center content-around">
 
-        <div class="outline w-2/3 h-56 mt-10">
-            <p class="pl-1.5">You</p><br>
-            <p class="pl-1.5" >Items:</p>
-            <p class="pl-1.5" id="items"></p><br>
-            <p class="pl-1.5">Current Location:</p>
-            <p class="pl-1.5" id="location">kitchen</p>
-            <p class="pl-1.5">Commands:</p>
+        <div class="outline w-2/3 h-56 mt-10 bg-gray-700">
+            <p class="pl-1.5 pt-1"><b><u>You</u></b></p><br>
+            <p class="pl-1.5"><b>Items in Bag:</b></p>
+            <p class="pl-1.5 text-indigo-900" id="items"></p><br>
+            <p class="pl-1.5"><b>Current Location:</b></p>
+            <p class="pl-1.5 text-red-500" id="location">kitchen</p>
+            <p class="pl-1.5"><b>Commands:</b></p>
             <p class="pl-1.5" id="tips"><b>take</b> to take an item, <b>talk </b> to talk to a character, type the direction you want to go to move there</p><br>
         </div>
-        <div class="outline w-2/3 h-56 mt-10">
+        <div class="outline w-2/3 h-56 mt-10 bg-gray-700">
             <p id="important-info" class="p-1.5">
             </p>
         </div>
 
-    <div class="outline w-2/3 h-56 mt-10 col-span-2">
+    <div class="outline w-2/3 h-56 mt-10 col-span-2 bg-gray-700">
         <p id="textarea" class="text-center p-1.5"></p>
         
     </div>
-    <div class="w-2/3 h-10 col-span-2">
-    <input type="text" id="usertext" class="outline w-full h-full text-center"></div>
+    <div class="w-2/3 h-10 col-span-2 mb-5">
+    <input type="text" id="usertext" class="outline outline-2 w-full h-full text-center bg-gray-700 text-white" placeholder="type here"></div>
 
     <button id="restart" value="restart-game" class="mt-2.5 pt-2.5 pb-2.5 pr-10 pl-10 bg-gray-800 text-white hover:bg-gray-600 hidden">Restart</button>
     </div>
